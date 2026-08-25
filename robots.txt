@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xiaojunwang537.github.io/guiyangzq/sitemap.xml
+Sitemap: https://github.com/xiaojunwang537/xiaojunwang537.github.io/blob/main/robots.txt
