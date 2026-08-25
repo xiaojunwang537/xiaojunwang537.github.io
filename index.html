@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>贵阳资源 - 贵阳美食推荐、贵阳修车攻略、本地资源清单</title>
+    <meta name="description" content="贵阳资源频道，精选贵阳本地美食推荐、贵阳修车攻略、贵阳资源清单。Telegram频道每日更新。">
+    <meta name="keywords" content="贵阳资源,贵阳修车,贵阳美食,贵阳修车攻略,贵阳美食推荐,贵阳资源清单,贵阳本地资源,贵阳美食攻略">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="贵阳资源 - 贵阳美食推荐、贵阳修车攻略、本地资源清单">
+    <meta property="og:description" content="精选贵阳本地美食推荐、贵阳修车攻略、贵阳资源清单，每日更新。">
+    <meta property="og:url" content="https://xiaojunwang537.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://xiaojunwang537.github.io/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "贵阳美食资源",
+        "description": "贵阳本地美食推荐、修车攻略、资源清单",
+        "url": "https://xiaojunwang537.github.io/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://xiaojunwang537.github.io/",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            min-height: 100vh;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px 16px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 40px 16px 30px;
+        }
+        
+        .hero .emoji-big {
+            font-size: 64px;
+            margin-bottom: 16px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 15px;
+            color: #aaa;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        /* CTA Button */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0088cc, #00aaff);
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 17px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+            min-height: 52px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .cta-btn:hover,
+        .cta-btn:active {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 136, 204, 0.6);
+        }
+        
+        .cta-btn .tg-icon {
+            margin-right: 8px;
+        }
+        
+        /* Section */
+        .section {
+            margin: 32px 0;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        /* Card Grid - Mobile First */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px 14px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 140px;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card:active {
+            background: rgba(255,255,255,0.12);
+            transform: scale(0.97);
+        }
+        
+        .card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        
+        .card .card-emoji {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .card h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        
+        .card p {
+            font-size: 12px;
+            color: #999;
+            line-height: 1.4;
+        }
+        
+        .card .tg-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 136, 204, 0.2);
+            color: #00aaff;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #ccc;
+        }
+        
+        .feature-list li .icon {
+            font-size: 22px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 32px 16px;
+            color: #666;
+            font-size: 13px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: 32px;
+        }
+        
+        .footer a {
+            color: #0088cc;
+            text-decoration: none;
+        }
+        
+        /* ====== Tablet & Desktop ====== */
+        @media (min-width: 480px) {
+            .container {
+                padding: 30px 24px;
+            }
+            .hero {
+                padding: 60px 20px;
+            }
+            .hero .emoji-big {
+                font-size: 72px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero .subtitle {
+                font-size: 16px;
+            }
+            .card-grid {
+                gap: 16px;
+            }
+            .card {
+                padding: 24px 20px;
+                min-height: 160px;
+            }
+            .card .card-emoji {
+                font-size: 42px;
+            }
+            .card h3 {
+                font-size: 16px;
+            }
+            .card p {
+                font-size: 13px;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+        }
+        
+        /* Small phone optimization */
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero .subtitle {
+                font-size: 14px;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                flex-direction: row;
+                min-height: auto;
+                padding: 16px;
+                gap: 12px;
+                text-align: left;
+            }
+            .card .card-emoji {
+                margin-bottom: 0;
+                font-size: 32px;
+            }
+            .card .card-text h3 {
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="emoji-big">🍜</div>
+            <h1>贵阳美食资源</h1>
+            <p class="subtitle">
+                贵阳本地美食推荐 · 修车攻略 · 资源清单<br>
+                每日更新，带你吃遍贵阳大街小巷
+            </p>
+            <a href="https://t.me/guiyangzq" class="cta-btn" target="_blank" rel="noopener">
+                <span class="tg-icon">✈️</span> 加入 Telegram 总群频道
+            </a>
+        </section>
+
+        <!-- 7 Food Categories -->
+        <section class="section">
+            <h2 class="section-title">美食频道分类</h2>
+            <div class="card-grid">
+                
+                <!-- 1. 探店推荐 -->
+                <a href="https://t.me/guiyangll" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🔥</div>
+                    <h3>资源总群</h3>
+                    <p>z真实可靠上榜资源，已有前人趟雷</p>
+                </a>
+                
+                <!-- 2. 粉面专区 -->
+                <a href="https://t.me/guiyangye" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🍜</div>
+                    <h3>交流专区</h3>
+                    <p>美食资源、修车攻略、生活技巧交流评到</p>
+                </a>
+                
+                <!-- 3. 火锅烧烤 -->
+                <a href="https://t.me/guiyangsy" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🫕</div>
+                    <h3>贵阳红榜</h3>
+                    <p>红榜优选、人气推荐、超棒资源</p>
+                </a>
+                
+                <!-- 4. 街头小吃 -->
+                <a href="https://t.me/guiyangly" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🍢</div>
+                    <h3>贵阳中转站</h3>
+                    <p>资源频道中转站</p>
+                </a>
+                
+                <!-- 5. 贵阳辣味 -->
+                <a href="https://t.me/guiyanggd" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🌶️</div>
+                    <h3>小时代中高端</h3>
+                    <p>高端美食推荐、人气榜单、修车强推</p>
+                </a>
+                
+                <!-- 6. 早餐专区 -->
+                <a href="https://t.me/guiyangpl" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🍚</div>
+                    <h3>美食车评</h3>
+                    <p>公开榜美食资源评价群、真实了解每份美食真实反馈</p>
+                </a>
+                
+                <!-- 7. 甜品饮品 -->
+                <a href="https://t.me/guiyanguu" class="card" target="_blank" rel="noopener">
+                    <span class="tg-badge">TG</span>
+                    <div class="card-emoji">🍰</div>
+                    <h3>贵阳励志群</h3>
+                    <p>美食出击分享、个人经历励志分享</p>
+                </a>
+                
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>贵阳美食资源 ©</p>
+            <p style="margin-top: 8px;">
+                Telegram 频道：<a href="https://t.me/guiyangye" target="_blank" rel="noopener">@guiyangye</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

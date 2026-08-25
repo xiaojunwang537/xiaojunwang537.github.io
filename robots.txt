@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xiaojunwang537.github.io/guiyangzq/sitemap.xml
